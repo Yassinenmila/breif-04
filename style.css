@@ -1,0 +1,25 @@
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+}
+.container{
+    display: flex;
+    height:100vh;
+    background-image: url("/10081437.jpg");
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+.cards{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: 40px;
+}
+.card{
+    background-color: red;
+    height: 100px;
+    width: 80px;
+}
