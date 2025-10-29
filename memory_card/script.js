@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const message = document.querySelector("h2");
     const score_message = document.querySelector("h3");
     const popup = document.querySelector(".popup");
+    const sound = new Audio("card-sounds-35956.mp3");
+    const winner=new Audio("applause-cheer-236786.mp3");
     let cpt = 0;
     let opencard = [];
     let score=0;
@@ -30,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         this.classList.add('boxopen');
         opencard.push(this);
-
+        sound.play();
         if (opencard.length === 2) {
             
             if (opencard[0].innerText === opencard[1].innerText) {
@@ -53,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         if (cpt == 8) {
             popup.style.display='flex';
+            winner.play();
         }
         score_message.innerText=`Score : ${score}`;
     }

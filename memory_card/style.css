@@ -19,7 +19,7 @@ button{
 .container{
     display: flex;
     height:90vh;
-    background-image: url("/10081437.jpg");
+    background-image: url("10081437.jpg");
     background-size: cover;
     justify-content: center;
     align-items: center;
