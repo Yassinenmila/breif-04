@@ -4,9 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let melange_card = melange(cards);
     const message = document.querySelector("h2");
     const score_message = document.querySelector("h3");
+    const popup = document.querySelector(".popup");
     let cpt = 0;
     let opencard = [];
     let score=0;
+
+
     for (let i = 0; i < cards.length; i++) {
         let box = document.createElement('div');
         box.className = "card";
@@ -49,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
         if (cpt == 8) {
-            message.innerText = `You win !!!`;
+            popup.style.display='flex';
         }
         score_message.innerText=`Score : ${score}`;
     }
