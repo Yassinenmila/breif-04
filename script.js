@@ -29,11 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
         opencard.push(this);
 
         if (opencard.length === 2) {
-           
+            
             if (opencard[0].innerText === opencard[1].innerText) {
                 opencard[0].classList.add('matched');
                 opencard[1].classList.add('matched');
-                cpt++; 
+                cpt++;
                 score++;
                 opencard = [];
             } else {
