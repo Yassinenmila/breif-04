@@ -6,6 +6,8 @@ let position = 0;
 let correct = 0;
 let faux = 0;
 let timer = 60;
+let result = 0;
+console.log(text.length)
 document.querySelector("#reset").onclick= function(){
     location.reload();
 }
@@ -14,9 +16,11 @@ document.addEventListener("keydown", function startC() {
         timer--;
         console.log(timer);
         document.querySelector("#timer").innerText =`Timer : ${timer}`;
-        if (timer == 0) {
+        if (timer == 0 || position == text.length) {
             clearInterval(time);
             document.removeEventListener("keydown",play);
+            result= Math.floor((correct/text.length)*100);
+            document.querySelector("#win").innerText=`you got ${result} %`;
         }
     }, 1000)
     document.removeEventListener("keydown", startC);
