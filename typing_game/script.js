@@ -6,16 +6,17 @@ let position=0;
 
 document.addEventListener("keydown", function (event) {
     const touch = event.key;
+    
     if(touch.length!==1)return;
     if(touch===text[position]){
-        spans[position].style.color="green";
+        spans[position].style.background="green";
     }
     else{
-        spans[position].style.color="tomato";
+        spans[position].style.background="tomato";
     }
     position++;
 });
-
+spans[position].style.background="yellow";
 function span (text){
     let p = document.createElement("p");
     for (let i = 0; i < text.length; i++) {
